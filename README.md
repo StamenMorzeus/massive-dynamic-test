@@ -13,12 +13,18 @@ what is needed to run an instance of this project:
 
 This app makes uses the [Laravel app framework](https://laravel.com/docs/9.x) with the [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/) and [Tailwindcss](https://tailwindcss.com/docs/installation)
 
-To start it up, create a local copy of the .env file to match your system within the src/ folder. Afterwards create the initial package installations through [npm](https://docs.npmjs.com/cli/v8/configuring-npm/install) and [composer](https://getcomposer.org/)
+To start it up, create a local copy of the .env file from .env.example. Afterwards create the initial package installations through [npm](https://docs.npmjs.com/cli/v8/configuring-npm/install) and [composer](https://getcomposer.org/)
+
+````
+$ npm install
+$ composer install
+````
 
 ### Running
 
 ````
 $ ./vendor/bin/sail up
+$ ./vendor/bin/sail artisan key:generate
 $ ./vendor/bin/sail artisan migrate
 $ ./vendor/bin/sail artisan db:seed
 ````
